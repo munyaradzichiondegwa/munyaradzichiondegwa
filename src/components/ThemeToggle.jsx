@@ -1,0 +1,19 @@
+// =====================================================
+// src/components/ThemeToggle.jsx
+// =====================================================
+
+import { Sun, Moon } from 'lucide-react';
+
+export default function ThemeToggle({ dark, setDark }) {
+  const toggleTheme = () => setDark(!dark);
+
+  return (
+    <button
+      onClick={toggleTheme}
+      className="p-2 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition"
+      aria-label="Toggle Dark Mode"
+    >
+      {dark ? <Sun size={20} /> : <Moon size={20} />}
+    </button>
+  );
+}

@@ -1,0 +1,12 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn { @apply px-5 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition flex items-center gap-2 justify-center; }
+  .btn-outline { @apply px-5 py-2 rounded-xl border border-slate-400 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-800 transition flex items-center gap-2 justify-center; }
+  .input { @apply px-4 py-3 rounded-xl border dark:border-slate-700 bg-white dark:bg-slate-900; }
+  .card { @apply rounded-2xl bg-white dark:bg-slate-900 shadow-md p-4; }
+  .section-title { @apply text-3xl font-semibold mb-6; }
+}
