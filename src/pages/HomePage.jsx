@@ -1,6 +1,4 @@
-// =====================================================
-// src/pages/Home.jsx
-// =====================================================
+// src/pages/HomePage.jsx (Full Updated File)
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -8,6 +6,7 @@ import { Github, Linkedin, Download } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import ProjectCard from '../components/ProjectCard';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer'; // New Import for Footer
 
 export default function HomePage() {
   const [dark, setDark] = useState(true);
@@ -35,9 +34,15 @@ export default function HomePage() {
           </p>
 
           <div className="flex justify-center flex-wrap gap-4">
-            <a href="https://github.com/munyaradzichiondegwa" className="btn-outline"><Github size={18}/> GitHub</a>
-            <a href="https://www.linkedin.com/in/munyaradzi-chiondegwa" className="btn-outline"><Linkedin size={18}/> LinkedIn</a>
-            <a href="/Munyaradzi Chiondegwa.pdf" download className="btn"><Download size={18}/> Resume</a>
+            <a href="https://github.com/munyaradzichiondegwa" className="btn-outline">
+              <Github size={18} /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/munyaradzi-chiondegwa" className="btn-outline">
+              <Linkedin size={18} /> LinkedIn
+            </a>
+            <a href="/Munyaradzi Chiondegwa.pdf" download className="btn">
+              <Download size={18} /> Resume
+            </a>
           </div>
         </motion.section>
 
@@ -45,7 +50,9 @@ export default function HomePage() {
           <h2 className="section-title">Tech Stack</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {["HTML","CSS","JavaScript","React","Node.js","Express","MongoDB","Python","SQL","Power BI","SAP","Docker"].map(skill => (
-              <motion.div key={skill} whileHover={{ scale: 1.05 }} className="card">{skill}</motion.div>
+              <motion.div key={skill} whileHover={{ scale: 1.05 }} className="card">
+                {skill}
+              </motion.div>
             ))}
           </div>
         </section>
@@ -114,6 +121,9 @@ export default function HomePage() {
           <h2 className="section-title">Contact</h2>
           <ContactForm />
         </section>
+
+        {/* Footer Integration */}
+        <Footer />
       </div>
     </div>
   );
